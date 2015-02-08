@@ -7,7 +7,7 @@ package edu.univdhaka.iit.singleton.test;
  * Created for: Design Pattern Assignment on 'Singleton Pattern'
  * Date		  : February 8, 2015
  * 
- * Reference  :
+ * Reference  : http://www.javaworld.com/article/2073352/core-java/simply-singleton.html
  */
 
 
