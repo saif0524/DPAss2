@@ -10,16 +10,13 @@
 
 package edu.univdhaka.iit.singleton.main;
 
-
-
-
-import edu.univdhaka.iit.singleton.runnables.MyThread;
+import edu.univdhaka.iit.singleton.runnables.InstantiatorThread;
 
 public class MainAppWithThread {
-	public static void main(String[] args){
-		Runnable getLetters = new MyThread();
-		Runnable getLettersAgain = new MyThread();
-		
+	public static void main(String[] args) {
+		Runnable getLetters = new InstantiatorThread();
+		Runnable getLettersAgain = new InstantiatorThread();
+
 		new Thread(getLetters).start();
 		new Thread(getLettersAgain).start();
 	}

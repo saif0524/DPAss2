@@ -8,33 +8,31 @@ public class MainApp {
 
 	public static void main(String[] args) {
 
-		
-		//First instance
-		Singleton firstObject = Singleton.getInstance();
+		// First instance
+		Singleton firstInstance = Singleton.getInstance();
 
-		System.out.println("Object 1 ID: " + firstObject);
+		System.out.println("Object 1 ID: " + firstInstance);
 
-		System.out.println(firstObject.getLinkedLetterList());
+		System.out.println(firstInstance.getLinkedLetterList());
 
-		LinkedList<String> firstSet = firstObject.getLetterSet(5);
+		LinkedList<String> firstSet = firstInstance.getLetterSet(5);
 
 		System.out.println("First LetterSet: " + firstSet);
 
-		System.out.println(firstObject.getLinkedLetterList());
+		System.out.println(firstInstance.getLinkedLetterList());
 
-		
-		//Creating another instance
-		Singleton secondObject = Singleton.getInstance();
+		// Creating another instance
+		Singleton secondInstance = Singleton.getInstance();
 
-		System.out.println("Object 2 ID: " + secondObject);
+		System.out.println("Object 2 ID: " + secondInstance);
 
-		System.out.println(secondObject.getLinkedLetterList());
+		System.out.println(secondInstance.getLinkedLetterList());
 
-		LinkedList<String> secondSet = secondObject.getLetterSet(5);
+		LinkedList<String> secondSet = secondInstance.getLetterSet(5);
 
 		System.out.println("Second LetterSet: " + secondSet);
 
-		System.out.println(secondObject.getLinkedLetterList());
+		System.out.println(secondInstance.getLinkedLetterList());
 
 	}
 

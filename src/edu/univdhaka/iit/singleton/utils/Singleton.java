@@ -1,9 +1,7 @@
 package edu.univdhaka.iit.singleton.utils;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 
 /*
  * Created by : Saif Uddin Mahmud
@@ -20,9 +18,6 @@ public class Singleton {
 			"n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",};
 	
 	LinkedList<String> linkedLetterList = new LinkedList<String>(Arrays.asList(letters));
-	
-	List<String> letterList = new ArrayList<String>();
-	
 	
 	private static boolean thread1 = true;
 	
@@ -49,25 +44,15 @@ public class Singleton {
 				}
 			}
 			
-			
-			instance = new Singleton();
-			// System.out.println("Singleton object instantiated..yaayyy!");
+			synchronized (Singleton.class) {
+				if(instance==null){
+					instance = new Singleton();
+					System.out.println("Singleton object instantiated.......");
+				}
+			}
 		}
 		return instance;
 	}
-
-	/*
-	 * public static void randomThread() {
-	 * 
-	 * MyThread thread1 = new MyThread("First Thread"); MyThread thread2 = new
-	 * MyThread("Second Thread");
-	 * 
-	 * thread1.run(); thread2.run();
-	 * 
-	 * 
-	 * }
-	 */
-
 	
 	public LinkedList<String> getLinkedLetterList(){
 		

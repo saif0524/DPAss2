@@ -4,23 +4,22 @@ import java.util.LinkedList;
 
 import edu.univdhaka.iit.singleton.utils.Singleton;
 
-public class MyThread implements Runnable {
+public class InstantiatorThread implements Runnable {
 
 	@Override
 	public void run() {
 
-		// First instance
-		Singleton firstObject = Singleton.getInstance();
+		Singleton singletonInstance = Singleton.getInstance();
 
-		System.out.println("Object 1 ID: " + firstObject);
+		System.out.println("Object 1 ID: " + singletonInstance);
 
-		System.out.println(firstObject.getLinkedLetterList());
+		System.out.println(singletonInstance.getLinkedLetterList());
 
-		LinkedList<String> firstSet = firstObject.getLetterSet(5);
+		LinkedList<String> firstSet = singletonInstance.getLetterSet(5);
 
 		System.out.println("First LetterSet: " + firstSet);
 
-		System.out.println(firstObject.getLinkedLetterList());
+		System.out.println(singletonInstance.getLinkedLetterList());
 
 		/*
 		 * System.out.println(threadName + " started.");
