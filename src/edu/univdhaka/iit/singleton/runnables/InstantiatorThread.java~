@@ -11,7 +11,7 @@ public class InstantiatorThread implements Runnable {
 
 		Singleton singletonInstance = Singleton.getInstance();
 
-		System.out.println("Object ID: " + singletonInstance);
+		System.out.println("Object : " + singletonInstance);
 
 		System.out.println(singletonInstance.getLinkedLetterList());
 
